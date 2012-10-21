@@ -13,7 +13,7 @@
   ":(")
 
 (defn avg [a-seq]
-  ":(")
+  -1)
 
 (defn parity [a-seq]
   ":(")
@@ -22,6 +22,5 @@
   ":(")
 
 (defn cut-at-repetition [a-seq]
-  ":(")
+  [":("])
 
-; %_____%
