@@ -16,6 +16,7 @@
 (facts "seq="
   (seq= [1 2 4] '(1 2 4))  => true
   (seq= [] [])             => true
+  (seq= [1 2 nil] [1 2])   => false
   (seq= [1 4 2] [1 2 4])   => false
   (seq= [1 2 3] [1 2 3 4]) => false
   (seq= [1 3 5] [])        => false)
