@@ -15,6 +15,8 @@
 
 (facts "seq="
   (seq= [1 2 4] '(1 2 4))  => true
+  (seq= [] [])             => true
+  (seq= [1 4 2] [1 2 4])   => false
   (seq= [1 2 3] [1 2 3 4]) => false
   (seq= [1 3 5] [])        => false)
 
@@ -42,7 +44,8 @@
   (fast-fibo 85) => 259695496911122585)
 
 (facts "cut-at-repetition"
-  (cut-at-repetition [1 1 1 1 1]) => [1]
+  (cut-at-repetition [1 1 1 1 1])
+    => [1]
   (cut-at-repetition [:cat :dog :house :milk 1 :cat :dog])
     => [:cat :dog :house :milk 1]
   (cut-at-repetition [0 1 2 3 4 5])
